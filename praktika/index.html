@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Интернет-магазин Палитра вкусов</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link type="image/x-icon" rel="shortcut icon" href="/image/ico.png" />
+    <script src="/js/scroll.js"></script>
+    <script src="/js/strelka.js"></script>
+    <script src="/js/avtorize.js"></script>
+  </head>
+
+  <body>
+    <div class="top-bar">
+      <div class="address">
+        <span>
+          <img src="/image/navig.png" alt="navig" width="25" />г. Чита, Ленина,
+          127</span
+        >
+      </div>
+      
+      <div class="login">
+        <a href="#login"><img src="/image/door.png" alt="door" width="20" /><button class="open-modal" onclick="toggleModal()">Войти</button></a>
+      </div>
+      <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="toggleModal()">&times;</span>
+            <div class="form-toggle">
+                <button id="login-toggle" onclick="showLogin()">Вход</button>
+                <button id="register-toggle" onclick="showRegister()">Регистрация</button>
+            </div>
+            <form id="login-form" class="form active">
+                <h2>Вход</h2>
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Пароль" required>
+                <div class="form-options">
+                    <label>
+                        <input type="checkbox" name="remember"> Запомнить меня
+                    </label>
+                    <a href="#" onclick="forgotPassword()">Забыли пароль?</a>
+                </div>
+                <button type="submit">Войти</button>
+            </form>
+            <form id="register-form" class="form">
+                <h2>Регистрация</h2>
+                <input type="text" placeholder="Имя" required>
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Пароль" required>
+                <input type="password" placeholder="Повторите пароль" required>
+                <button type="submit">Зарегистрироваться</button>
+            </form>
+          </div>  
+        </div>
+      </div>
+
+    <header class="sticky-header">
+      <div class="logo">
+        <a href="/index.html"><img src="/image/2.png" alt="2" width="200" /></a>
+      </div>
+
+      <div class="search-bar">
+        <input type="text" placeholder="Поиск по сайту" />
+        <span class="search-icon"
+          ><img src="/image/poisk.png" alt="poisk" width="17"
+        /></span>
+      </div>
+
+      <div class="contact-info">
+        <div class="phone">
+          <img src="/image/trybka.png" alt="call" width="17" />888-888
+        </div>
+        <div class="icon">
+          <img src="/image/heart.png" alt="serdce" width="20" />
+        </div>
+        <div class="shop">
+          <img src="/image/korzina.png" alt="korzina" width="20" />
+        </div>
+      </div>
+    </header>
+
+    <nav class="main-nav">
+      <ul>
+        <div class="katalog">
+          <li><a href="katalog.html">Каталог товаров</a></li>
+        </div>
+        <div class="katalog">
+          <li><a href="#promotions">Акции</a></li>
+        </div>
+        <div class="katalog">
+          <li><a href="#about">О компании</a></li>
+        </div>
+        <div class="katalog">
+          <li><a href="#bonus">Бонусная программа</a></li>
+        </div>
+        <div class="katalog">
+          <li><a href="#recipes">Рецепты</a></li>
+        </div>
+      </ul>
+    </nav>
+
+    <section class="promo">
+      <img src="/image/1.png" alt="1" width="1000" />
+    </section>
+
+    <div class="content-container">
+      <aside class="sidebar">
+        <ul class="categories">
+          <div class="obvkategorii">
+            <li>Сезонный товар</li>
+          </div>
+          <div class="obvkategorii">
+            <li>Пицца</li>
+          </div>
+          <div class="obvkategorii">
+            <li>Готовая еда</li>
+          </div>
+          <div class="obvkategorii">
+            <li>Собственное производство</li>
+          </div>
+          <div class="obvkategorii">
+            <li>Овощи, фрукты, ягоды, зелень, грибы</li>
+          </div>
+          <div class="obvkategorii">
+            <li>Молоко, сыр, яйцо</li>
+          </div>
+          <div class="obvkategorii">
+            <li>Мясо, птица, колбасы</li>
+          </div>
+          <div class="obvkategorii">
+            <li>Рыба, икра, морепродукты</li>
+          </div>
+          <div class="obvkategorii">
+            <li>Макароны, крупы, мука</li>
+          </div>
+          <div class="obvkategorii">
+            <li>Масла, соусы, специи, сахар, соль</li>
+          </div>
+          <div class="obvkategorii">
+            <li>Продукты быстрого приготовления</li>
+          </div>
+          <div class="obvkategorii">
+            <li>Чипсы, сухарики, попкорн</li>
+          </div>
+          <div class="obvkategorii">
+            <li>Вода, соки, напитки</li>
+          </div>
+          <div class="obvkategorii">
+            <li>Хлеб, хлебцы, выпечка</li>
+          </div>
+        </ul>
+      </aside>
+
+      <!-- Список товаров -->
+      <section class="products">
+        <div class="nadpis">
+          <h2>Хит продаж</h2>
+        </div>
+        <div class="product-list">
+          <!-- Продукты -->
+          <div class="product-item">
+            <a href="/card/milk.html">
+            <img
+              src="https://cdn-img.perekrestok.ru/i/800x800-fit/xdelivery/files/13/b5/07c35316d800c1d8010b59bxd818.jpg"
+              width="300"
+              alt="Молоко"
+            />
+            <p class="name">Молоко ПРОСТОКВАШИНО</p>
+            <p class="old-price">119.54 руб.</p>
+            <p class="new-price">79.99 руб. / шт</p>
+          </div>
+        </a>
+          <div class="product-item">
+            <a href="/card/goroh.html">
+            <img
+              src="https://image.kazanexpress.ru/cscj760of53c9bs1v88g/t_product_high.jpg"
+              alt="Горошек зеленый"
+            />
+            <p class="name">Горошек зеленый BONDUELLE 212мл</p>
+            <p class="old-price">109.96 руб.</p>
+            <p class="new-price">79.96 руб. / шт</p>
+          </div>
+        </a>
+          <div class="product-item">
+            <a href="/card/yaiso.html">
+            <img
+              src="https://prodzapas.pro/wp-content/uploads/2019/08/yajtsoo-500x500.jpg"
+              alt="Яйца"
+            />
+            <p class="name">Яйцо НК 1кат 30шт</p>
+            <p class="price">329.98 руб. / шт</p>
+          </div>
+        </a>
+          <div class="product-item">
+            <img
+              src="https://www.mymegamarket.ru/upload/iblock/699/699c11877029056e8abd74f60ab4abdf.jpg"
+              alt="Молоко"
+            />
+            <p class="name">Молоко ПРОСТОКВАШИНО</p>
+            <p class="price">119.98 руб. / шт</p>
+          </div>
+          <div class="product-item">
+            <img
+              src="https://apeti.ru/upload/iblock/bee/1l7ddnp7k9411w139xp3pa5jucurghcn/mandariny_turtsiya.jpg"
+              alt="Мандарины"
+            />
+            <p class="name">Мандарины</p>
+            <p class="price">Акция! 79.99 руб. / кг</p>
+          </div>
+          <div class="product-item">
+            <img
+              src="https://ir.ozone.ru/s3/multimedia-1-k/c1000/6922687148.jpg"
+              alt="Хлеб"
+            />
+            <p class="name">Хлеб</p>
+            <p class="price">59.98 руб. / шт</p>
+          </div>
+          <div class="product-item">
+            <img
+              src="https://cdn.metro-cc.ru/ru/ru_pim_174320001001_01.png?maxwidth=460&maxheight=460&format=jpg&quality=90&width=460&height=460"
+              alt="Йогурт"
+            />
+            <p class="name">Йогурт АКТИБИО</p>
+            <p class="price">39.99 руб. / шт</p>
+          </div>
+          <div class="product-item">
+            <img
+              src="https://avatars.mds.yandex.net/i?id=f400b028b921880086e1016d5f6ad0b5_l-9710160-images-thumbs&n=13"
+              alt="Сыр"
+            />
+            <p class="name">Сыр Моцарелла BONFESTO Пицца 40% 250г</p>
+            <p class="old-price">326.03 руб</p>
+            <p class="new-price">249.96 руб. / шт</p>
+          </div>
+          <div class="product-item">
+            <img
+              src="https://petroflora.ru/upload/iblock/b92/guy7ww3t2mo90ikz15x01wkeipiyn3gj/kapusta.jpg"
+              alt="Капуста"
+            />
+            <p class="name">Капуста свежая</p>
+            <p class="price">39.98 руб. / кг</p>
+          </div>
+        </div>
+        <div class="popular">
+          <h1>Популярные категории</h1>
+          <div class="grid">
+            <div class="category">
+              <img
+                src="https://i.pinimg.com/736x/ee/70/e7/ee70e7c39a6582833ecb9674d57d85a2.jpg"
+                alt="Сезонный товар"
+                width="200"
+              />
+              <div class="category-title">СЕЗОННЫЙ ТОВАР</div>
+            </div>
+            <div class="category">
+              <img
+                src="https://img.povar.ru/main-micro/ad/44/1f/23/picca_s_kopchenoi_kolbasoi-89755.jpg"
+                alt="Пицца"
+                width="350"
+              />
+              <div class="category-title">ПИЦЦА</div>
+            </div>
+            <div class="category">
+              <img
+                src="https://begarat.ru/wp-content/uploads/Gotovyye-blyuda-mic-1-2.png"
+                alt="Готовая еда"
+                width="450"
+              />
+              <div class="category-title">ГОТОВАЯ ЕДА</div>
+            </div>
+            <div class="category">
+              <img
+                src="https://otvet.ya.guru/media/im/kW/Bs/kWBsvAuCoP0HRTh6LRGPlXf4LOZ3E01.png"
+                alt="Собственное производство"
+                width="300"
+              />
+              <div class="category-title">СОБСТВЕННОЕ ПРОИЗВОДСТВО</div>
+            </div>
+            <div class="category">
+              <img
+                src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgvOhCb8oZ55MpVp9fw11UwT98kQML2xjfEfUqZCe4UP9lo6NxvI4xKmwdFwVWhwwxk7_tSksVumDkbq8BJb0ozFA0u0dbMaH4olPBFP-mUrf4siFaAdEll5YrJ97E9IEVb0mJgY7ffCjQ/s1600/%25D1%2584%25D1%2580%25D1%2583%25D0%25BA%25D1%2582%25D1%258B_+DoV+%25283%2529.png"
+                alt="Овощи, фрукты"
+                width="500"
+              />
+              <div class="category-title">
+                ОВОЩИ, ФРУКТЫ, ЯГОДЫ, ЗЕЛЕНЬ, ГРИБЫ
+              </div>
+            </div>
+            <div class="category">
+              <img
+                src="https://www.nordspb.ru/upload/iblock/c74/molochnaya_produktsiya.png"
+                alt="Молоко, сыр, яйцо"
+                width="400"
+              />
+              <div class="category-title">МОЛОКО, СЫР, ЯЙЦО</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="onas">
+          <h1>О нас</h1>
+          <div class="section">
+            <div class="section-text">
+              <h2>Мясные полуфабрикаты и колбасы</h2>
+              <p>
+                Мясо свинины и говядины, более 200 видов колбас, мясных
+                деликатесов и полуфабрикатов. Наша задача – предоставить людям
+                возможность ежедневно приобретать самые свежие и
+                высококачественные мясные продукты, сохраняя все полезные
+                свойства и естественный природный вкус.
+              </p>
+            </div>
+            <div class="section-image">
+              <img
+                src="https://tkivachenko.ru/wp-content/uploads/2016/09/brands8cuZho_img.jpg"
+                alt="Мясные полуфабрикаты"
+              />
+            </div>
+          </div>
+
+          <div class="section">
+            <div class="section-text">
+              <h2>Выпечка хлеба</h2>
+              <p>
+                Мы сами печем вкусный и качественный хлеб, а также радуем
+                покупателей багетами, батонами, лепешками и разного вида
+                булочками собственного производства. Наличие своего пекарского
+                цеха помогает нам контролировать и оптимизировать приготовление
+                хлеба.
+              </p>
+            </div>
+            <div class="section-image">
+              <img
+                src="https://avatars.mds.yandex.net/i?id=f617672a5bc596fe6a422d6c42ffbcbb_l-4959824-images-thumbs&n=13"
+                alt="Выпечка хлеба"
+              />
+            </div>
+          </div>
+
+          <div class="section">
+            <div class="section-text">
+              <h2>Кондитерские изделия собственного производства</h2>
+              <p>
+                Широкий ассортимент сладостей в самых разных категориях: торты,
+                десерты, пирожные и другие лакомства. Мы стремимся к
+                совершенству, предлагая клиентам изысканные вкусы и натуральные
+                ингредиенты.
+              </p>
+            </div>
+            <div class="section-image">
+              <img
+                src="https://avatars.mds.yandex.net/i?id=4c23e2e75395f36323fe4b373c4ea253_l-5235063-images-thumbs&n=13"
+                alt="Сладкий базар"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Кнопка возврата наверх -->
+    <a href="#" id="back-to-top" title="Вернуться наверх">↑</a>
+    
+    <footer>
+      <div class="footer-container">
+        <div class="footer-section">
+          <h4>Акции</h4>
+          <ul>
+            <li><a href="#">Цены ниже</a></li>
+            <li><a href="#">Новогодний каталог</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>О компании</h4>
+          <ul>
+            <li><a href="#">О нас</a></li>
+            <li><a href="#">Новости</a></li>
+            <li><a href="#">Отзывы</a></li>
+            <li><a href="#">Контакты</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Помощь</h4>
+          <ul>
+            <li><a href="#">Условия доставки</a></li>
+            <li><a href="#">Обмен и Возврат</a></li>
+            <li><a href="#">Вопрос - ответ</a></li>
+            <li><a href="#">Пользовательское соглашение</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <form action="#" method="get" class="search">
+            <input type="text" placeholder="Поиск по сайту" />
+            <span class="search-icon2"
+              ><img src="/image/poiskwhite.png" alt="poisk" width="17"
+            /></span>
+          </form>
+          <div class="contact">
+            <p style="font-weight: bold">
+              <img src="/image/trybkawhite.png" alt="trybka" width="20" />
+              888-888
+            </p>
+            <p>
+              <img src="/image/navigwhite.png" alt="navig" width="27" /> г.
+              Чита, Ленина, 127
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2024 Интернет-магазин Палитра вкусов</p>
+      </div>
+    </footer>
+    
+  </body>
+</html>

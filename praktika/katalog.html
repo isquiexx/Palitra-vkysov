@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Интернет-магазин Палитра вкусов</title>
+    <link rel="stylesheet" href="/css/style katalog.css" />
+    <link type="image/x-icon" rel="shortcut icon" href="/image/ico.png" />
+    <script src="/js/scroll.js"></script>
+    <script src="/js/strelka.js"></script>
+    <script src="/js/avtorize.js"></script>
+  </head>
+
+  <body>
+    <div class="top-bar">
+      <div class="address">
+        <span>
+          <img src="/image/navig.png" alt="navig" width="25" />г. Чита, Ленина,
+          127</span
+        >
+      </div>
+      <div class="login">
+        <a href="#login"
+          ><img src="/image/door.png" alt="door" width="20" /><button
+            class="open-modal"
+            onclick="toggleModal()"
+          >
+            Войти
+          </button></a
+        >
+      </div>
+      <div id="modal" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="toggleModal()">&times;</span>
+          <div class="form-toggle">
+            <button id="login-toggle" onclick="showLogin()">Вход</button>
+            <button id="register-toggle" onclick="showRegister()">
+              Регистрация
+            </button>
+          </div>
+          <form id="login-form" class="form active">
+            <h2>Вход</h2>
+            <input type="email" placeholder="Email" required />
+            <input type="password" placeholder="Пароль" required />
+            <div class="form-options">
+              <label>
+                <input type="checkbox" name="remember" /> Запомнить меня
+              </label>
+              <a href="#" onclick="forgotPassword()">Забыли пароль?</a>
+            </div>
+            <button type="submit">Войти</button>
+          </form>
+          <form id="register-form" class="form">
+            <h2>Регистрация</h2>
+            <input type="text" placeholder="Имя" required />
+            <input type="email" placeholder="Email" required />
+            <input type="password" placeholder="Пароль" required />
+            <input type="password" placeholder="Повторите пароль" required />
+            <button type="submit">Зарегистрироваться</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="zakrep">
+      <header class="sticky-header">
+        <div class="logo">
+          <a href="index.html"
+            ><img src="/image/2.png" alt="2" width="200"
+          /></a>
+        </div>
+
+        <div class="search-bar">
+          <input type="text" placeholder="Поиск по сайту" />
+          <span class="search-icon"
+            ><img src="/image/poisk.png" alt="poisk" width="17"
+          /></span>
+        </div>
+
+        <div class="contact-info">
+          <div class="phone">
+            <img src="/image/trybka.png" alt="call" width="17" />888-888
+          </div>
+          <div class="icon">
+            <img src="/image/heart.png" alt="serdce" width="20" />
+          </div>
+          <div class="shop">
+            <img src="/image/korzina.png" alt="korzina" width="20" />
+          </div>
+        </div>
+      </header>
+    </div>
+    <nav class="main-nav">
+      <ul>
+        <div class="katalog">
+          <li><a href="katalog.html">Каталог товаров</a></li>
+        </div>
+        <div class="katalog">
+          <li><a href="#promotions">Акции</a></li>
+        </div>
+        <div class="katalog">
+          <li><a href="#about">О компании</a></li>
+        </div>
+        <div class="katalog">
+          <li><a href="#bonus">Бонусная программа</a></li>
+        </div>
+        <div class="katalog">
+          <li><a href="#recipes">Рецепты</a></li>
+        </div>
+      </ul>
+    </nav>
+
+    <div class="catalog">
+      <div class="way">
+        <a href="index.html">Главная</a> /
+        <a href="katalog.html">Каталог товаров</a>
+      </div>
+      <h1>Каталог товаров</h1>
+      <div class="categories">
+        <div class="category">
+          <img
+            src="https://i.pinimg.com/736x/ee/70/e7/ee70e7c39a6582833ecb9674d57d85a2.jpg"
+            alt="Сезонный товар"
+          />
+          <p>СЕЗОННЫЙ ТОВАР (65)</p>
+        </div>
+        <div class="category">
+          <img
+            src="https://i.pinimg.com/originals/20/d2/2e/20d22e9fd90b6ec066e84ac52ac747eb.png"
+            width="200"
+            alt="Пицца"
+          />
+          <p>ПИЦЦА (14)</p>
+        </div>
+        <div class="category">
+          <img
+            src="https://kartinki.pics/uploads/posts/2022-12/1669979891_6-kartinkin-net-p-gotovaya-yeda-v-konteinerakh-vkontakte-6.png"
+            alt="Готовая еда"
+          />
+          <p>ГОТОВАЯ ЕДА (356)</p>
+        </div>
+        <div class="category">
+          <img
+            src="https://otvet.ya.guru/media/im/kW/Bs/kWBsvAuCoP0HRTh6LRGPlXf4LOZ3E01.png"
+            alt="Собственное производство"
+          />
+          <p>СОБСТВЕННОЕ ПРОИЗВОДСТВО (292)</p>
+        </div>
+        <div class="category">
+          <img
+            src="https://i.pinimg.com/originals/bc/78/d5/bc78d5503f8f3e93f619ab4cbad019a3.png"
+            alt="Овощи, фрукты, ягоды"
+          />
+          <p>ОВОЩИ, ФРУКТЫ, ЯГОДЫ, ЗЕЛЕНЬ, ГРИБЫ (293)</p>
+        </div>
+        <div class="category">
+          <img
+            src="https://www.nordspb.ru/upload/iblock/c74/molochnaya_produktsiya.png"
+            alt="Молоко, сыр, яйца"
+          />
+          <p>МОЛОКО, СЫР, ЯЙЦО (810)</p>
+        </div>
+        <div class="category">
+          <img
+            src="https://sovietmk.ru/wp-content/uploads/2021/10/pngegg-4.png"
+            alt="Мясо, птица, колбасы"
+          />
+          <p>МЯСО, ПТИЦА, КОЛБАСЫ (477)</p>
+        </div>
+        <div class="category">
+          <img
+            src="https://вкусныйкраб.рф/uploads/cache/Sliders/Slider12/5ac7faafcb-2.png"
+            alt="Рыба, икра, морепродукты"
+          />
+          <p>РЫБА, ИКРА, МОРЕПРОДУКТЫ (301)</p>
+        </div>
+        <div class="category">
+          <img
+            src="https://khab-vesti.ru/upload/iblock/edb/oevrhfozjbs892icu8ml5x0q7en6bhbe.png"
+            alt="Макароны, крупы, мука"
+          />
+          <p>МАКАРОНЫ, КРУПЫ, МУКА (545)</p>
+        </div>
+        <div class="category">
+          <img
+            src="https://www.nicepng.com/png/full/660-6605377_design-a-variety-of-menus-that-suit-all.png"
+            alt="Масла, специи, сахар"
+          />
+          <p>МАСЛА, СОУСЫ, СПЕЦИИ, САХАР, СОЛЬ (534)</p>
+        </div>
+        <div class="category">
+          <img
+            src="https://rsovin.ru/wp-content/uploads/2023/02/bp-614x674.png"
+            alt="Быстрое приготовление"
+          />
+          <p>ПРОДУКТЫ БЫСТРОГО ПРИГОТОВЛЕНИЯ (162)</p>
+        </div>
+        <div class="category">
+          <img
+            src="https://www.melissadomansleepconsulting.com/wp-content/uploads/2020/02/Screen-Shot-2020-02-06-at-10.36.33-AM.png"
+            alt="Пицца"
+          />
+          <p>ЧИПСЫ, СУХАРИКИ, ПОПКОРН (163)</p>
+        </div>
+        <div class="category">
+          <img
+            src="https://avatars.mds.yandex.net/get-sprav-products/4472294/2a00000183a108fb62c14ce70ad06459cce1/XXL"
+            alt="Готовая еда"
+          />
+          <p>ВОДА, СОКИ, НАПИТКИ (526)</p>
+        </div>
+        <div class="category">
+          <img
+            src="https://edabezvreda.com/files/categories/%D1%83%D0%B5%D1%83%D0%BA%D0%B5%D1%8B%D0%BA%D1%863%D1%83%D0%BF.png"
+            alt="Собственное производство"
+          />
+          <p>ХЛЕБ, ХЛЕБЦЫ, ВЫПЕЧКА (203)</p>
+        </div>
+        <div class="category">
+          <img
+            src="https://png.klev.club/uploads/posts/2024-04/png-klev-club-sgju-p-konditerskie-izdeliya-png-19.png"
+            alt="Овощи, фрукты, ягоды"
+          />
+          <p>СЛАДОСТИ, ТОРТЫ, ПИРОЖНЫЕ (1719)</p>
+        </div>
+        <div class="category">
+          <img
+            src="https://tsmerkury.kz/upload/iblock/a11/a11df05475d29c806bc92d850b38853a.png"
+            alt="Молоко, сыр, яйца"
+          />
+          <p>ЧАЙ, КОФЕ, КАКАО (399)</p>
+        </div>
+        <div class="category">
+          <img
+            src="https://www.tedpc.com/wp-content/uploads/2019/07/baby-food-pouch-spout.png"
+            alt="Мясо, птица, колбасы"
+          />
+          <p>ДЕТСКОЕ ПИТАНИЕ, УХОД, ИГРУШКИ (601)</p>
+        </div>
+        <div class="category">
+          <img
+            src="https://avatars.mds.yandex.net/i?id=9eb71fa0882c0b156a66920ec19104ff53be854f-4956937-images-thumbs&n=13"
+            alt="Рыба, икра, морепродукты"
+          />
+          <p>ЗАМОРОЖЕННЫЕ ПРОДУКТЫ, МОРОЖЕНОЕ (403)</p>
+        </div>
+        <div class="category">
+          <img
+            src="https://static.tildacdn.com/tild6637-3062-4161-a131-373330383939/otvetdesign_sunfeel4.png"
+            alt="Макароны, крупы, мука"
+          />
+          <p>КОНСЕРВЫ, ВАРЕНЬЕ, МЁД (485)</p>
+        </div>
+        <div class="category">
+          <img
+            src="https://optimisticbrain.com/wp-content/uploads/nutrition1080x600-980x544.png"
+            alt="Масла, специи, сахар"
+          />
+          <p>ЗДОРОВОЕ ПИТАНИЕ, ЭКОЛОГИЧНЫЕ ТОВАРЫ</p>
+        </div>
+        <div class="category">
+          <img
+            src="https://png.klev.club/uploads/posts/2024-05/png-klev-club-4evv-p-khozyaistvennie-tovari-png-2.png"
+            alt="Сезонный товар"
+          />
+          <p>БЫТОВАЯ ХИМИЯ И УБОРКА (388)</p>
+        </div>
+        <div class="category">
+          <img
+            src="https://vsyahimiya.ru/wp-content/uploads/2024/03/remove-bg.ai_1710588198282.png"
+            alt="Пицца"
+          />
+          <p>КОСМЕТИКА, ЛИЧНАЯ ГИГИЕНА (905)</p>
+        </div>
+        <div class="category">
+          <img
+            src="https://static.seekingalpha.com/uploads/2017/2/7/748328-14865141101812596_origin.png"
+            alt="Готовая еда"
+          />
+          <p>ТОВАРЫ ДЛЯ ЖИВОТНЫХ (322)</p>
+        </div>
+        <div class="category">
+          <img
+            src="https://qatarb2bonline.com/wp-content/uploads/2020/05/food-items-2048x901.png"
+            alt="Собственное производство"
+          />
+          <p>НАШИ МАРКИ (221)</p>
+        </div>
+        <div class="category">
+          <img
+            src="https://avatars.mds.yandex.net/i?id=fa0cdb454119f32c393183204a94a3e2_sr-9203527-images-thumbs&n=13"
+            alt="Овощи, фрукты, ягоды"
+          />
+          <p>ТОВАРЫ ДЛЯ ДОМА, ДАЧИ, АВТО (1389)</p>
+        </div>
+      </div>
+    </div>
+    <a href="#" id="back-to-top" title="Вернуться наверх">↑</a>
+    <footer>
+      <div class="footer-container">
+        <div class="footer-section">
+          <h4>Акции</h4>
+          <ul>
+            <li><a href="#">Цены ниже</a></li>
+            <li><a href="#">Новогодний каталог</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>О компании</h4>
+          <ul>
+            <li><a href="#">О нас</a></li>
+            <li><a href="#">Новости</a></li>
+            <li><a href="#">Отзывы</a></li>
+            <li><a href="#">Контакты</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Помощь</h4>
+          <ul>
+            <li><a href="#">Условия доставки</a></li>
+            <li><a href="#">Обмен и Возврат</a></li>
+            <li><a href="#">Вопрос - ответ</a></li>
+            <li><a href="#">Пользовательское соглашение</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <form action="#" method="get" class="search">
+            <input type="text" placeholder="Поиск по сайту" />
+            <span class="search-icon2"
+              ><img src="/image/poiskwhite.png" alt="poisk" width="17"
+            /></span>
+          </form>
+          <div class="contact">
+            <p style="font-weight: bold">
+              <img src="/image/trybkawhite.png" alt="trybka" width="20" />
+              888-888
+            </p>
+            <p>
+              <img src="/image/navigwhite.png" alt="navig" width="27" /> г.
+              Чита, Ленина, 127
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2024 Интернет-магазин Палитра вкусов</p>
+      </div>
+    </footer>
+  </body>
+</html>

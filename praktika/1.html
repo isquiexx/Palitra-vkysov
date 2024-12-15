@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Биойогурт</title>
+  <link rel="stylesheet" href="/css/card.css">
+</head>
+<body>
+  <div class="container">
+    <nav class="breadcrumb">
+      <a href="index.html">Главная</a> / 
+      <a href="katalog.html">Каталог товаров</a> / 
+      <a href="#">Молоко, сыр, яйца</a> / 
+      <a href="#">Йогурты</a> / 
+      <span>Биойогурт АктивБио Вишня 2,9%</span>
+    </nav>
+    <div class="product">
+      <div class="image">
+        <img src="bioyogurt.jpg" alt="Биойогурт АктивБио">
+      </div>
+      <div class="details">
+        <h1>Биойогурт АктивБио Вишня 2,9% 130г без ЗМЖ</h1>
+        <div class="price">64.95 руб.</div>
+        <div class="quantity">
+          <button class="minus">-</button>
+          <input type="text" value="0" id="quantity" readonly>
+          <button class="plus">+</button>
+        </div>
+        <button class="add-to-cart">Добавить</button>
+        <h2>Описание</h2>
+        <p>
+          Натуральный густой биойогурт с вишней. Способствует комфортному пищеварению благодаря
+          бифидобактериям ActiRegularis® в составе. 100% без консервантов и искусственных добавок. 
+          Полезный перекус на каждый день.
+        </p>
+        <div class="additional-info">
+          <a href="#">Способы оплаты</a> | <a href="#">Доставка</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="notification" id="notification">
+    <p id="notification-message"></p>
+    <button id="close-notification">Закрыть</button>
+  </div>
+
+  <script src="/js/kolichestvo.js"></script>
+</body>
+</html>

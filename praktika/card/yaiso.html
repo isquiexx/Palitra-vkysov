@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Яйцо НК 1кат 30штук (каретка)</title>
+    <link rel="stylesheet" href="/css/card.css" />
+    <link type="image/x-icon" rel="shortcut icon" href="/image/ico.png" />
+    <script src="/js/scroll.js"></script>
+    <script src="/js/avtorize.js"></script>
+  </head>
+  <body>
+    <div class="top-bar">
+      <div class="address">
+        <span>
+          <img src="/image/navig.png" alt="navig" width="25" />г. Чита, Ленина,
+          127</span
+        >
+      </div>
+      <div class="login">
+        <a href="#login"
+          ><img src="/image/door.png" alt="door" width="20" /><button
+            class="open-modal"
+            onclick="toggleModal()"
+          >
+            Войти
+          </button></a
+        >
+      </div>
+      <div id="modal" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="toggleModal()">&times;</span>
+          <div class="form-toggle">
+            <button id="login-toggle" onclick="showLogin()">Вход</button>
+            <button id="register-toggle" onclick="showRegister()">
+              Регистрация
+            </button>
+          </div>
+          <form id="login-form" class="form active">
+            <h2>Вход</h2>
+            <input type="email" placeholder="Email" required />
+            <input type="password" placeholder="Пароль" required />
+            <div class="form-options">
+              <label>
+                <input type="checkbox" name="remember" /> Запомнить меня
+              </label>
+              <a href="#" onclick="forgotPassword()">Забыли пароль?</a>
+            </div>
+            <button type="submit">Войти</button>
+          </form>
+          <form id="register-form" class="form">
+            <h2>Регистрация</h2>
+            <input type="text" placeholder="Имя" required />
+            <input type="email" placeholder="Email" required />
+            <input type="password" placeholder="Пароль" required />
+            <input type="password" placeholder="Повторите пароль" required />
+            <button type="submit">Зарегистрироваться</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="zakrep">
+      <header class="sticky-header">
+        <div class="logo">
+          <a href="/index.html"
+            ><img src="/image/2.png" alt="2" width="200"
+          /></a>
+        </div>
+
+        <div class="search-bar">
+          <input type="text" placeholder="Поиск по сайту" />
+          <span class="search-icon"
+            ><img src="/image/poisk.png" alt="poisk" width="17"
+          /></span>
+        </div>
+
+        <div class="contact-info">
+          <div class="phone">
+            <img src="/image/trybka.png" alt="call" width="17" />888-888
+          </div>
+          <div class="icon">
+            <img src="/image/heart.png" alt="serdce" width="20" />
+          </div>
+          <div class="cart-icon">
+            <a href="/cart.html">
+              <img src="/image/korzina.png" alt="korzina" width="20" />
+            </a>
+          </div>
+        </div>
+      </header>
+    </div>
+    <nav class="main-nav">
+      <ul>
+        <div class="katalog">
+          <li><a href="/katalog.html">Каталог товаров</a></li>
+        </div>
+        <div class="katalog">
+          <li><a href="#promotions">Акции</a></li>
+        </div>
+        <div class="katalog">
+          <li><a href="#about">О компании</a></li>
+        </div>
+        <div class="katalog">
+          <li><a href="#bonus">Бонусная программа</a></li>
+        </div>
+        <div class="katalog">
+          <li><a href="#recipes">Рецепты</a></li>
+        </div>
+      </ul>
+    </nav>
+
+    <div class="container">
+      <div class="way">
+        <a href="/index.html">Главная</a> /
+        <a href="/katalog.html">Каталог товаров</a> /
+        <a href="#"> МОЛОКО, СЫР, ЯЙЦО</a> / <a href="#">ЯЙЦО</a> /
+        <a href="#"> 1 КАТЕГОРИЯ</a> /
+        <span>Яйцо НК 1кат 30штук (каретка)</span>
+      </div>
+      <h1>Яйцо НК 1кат 30штук (каретка)</h1>
+      <div class="product">
+        <div class="image">
+          <img
+            src="https://prodzapas.pro/wp-content/uploads/2019/08/yajtsoo-500x500.jpg"
+            alt="Молоко"
+          />
+        </div>
+        <div class="details">
+          <div class="price">329.98 руб.</div>
+          <div class="vodno">
+            <div class="quantity">
+              <button class="minus">-</button>
+              <input type="text" value="0" id="quantity" readonly />
+              <button class="plus">+</button>
+            </div>
+            <button class="add-to-cart">
+              <img src="/image/korzina.png" alt="korzina" width="17" />В корзину
+            </button>
+          </div>
+          <h2>Описание</h2>
+          <p>
+            Свежие и качественные яйца первой категории гарантируют вам полезный и вкусный продукт для приготовления разнообразных блюд.
+          </p>
+          <div class="additional-info">
+            <a href="#">Способы оплаты</a> <a href="#">Доставка</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="notification" id="notification">
+      <p id="notification-message"></p>
+      <button id="close-notification">Закрыть</button>
+    </div>
+
+    <footer>
+      <div class="footer-container">
+        <div class="footer-section">
+          <h4>Акции</h4>
+          <ul>
+            <li><a href="#">Цены ниже</a></li>
+            <li><a href="#">Новогодний каталог</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>О компании</h4>
+          <ul>
+            <li><a href="#">О нас</a></li>
+            <li><a href="#">Новости</a></li>
+            <li><a href="#">Отзывы</a></li>
+            <li><a href="#">Контакты</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Помощь</h4>
+          <ul>
+            <li><a href="#">Условия доставки</a></li>
+            <li><a href="#">Обмен и Возврат</a></li>
+            <li><a href="#">Вопрос - ответ</a></li>
+            <li><a href="#">Пользовательское соглашение</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <form action="#" method="get" class="search">
+            <input type="text" placeholder="Поиск по сайту" />
+            <span class="search-icon2"
+              ><img src="/image/poiskwhite.png" alt="poisk" width="17"
+            /></span>
+          </form>
+          <div class="contact">
+            <p style="font-weight: bold">
+              <img src="/image/trybkawhite.png" alt="trybka" width="20" />
+              888-888
+            </p>
+            <p>
+              <img src="/image/navigwhite.png" alt="navig" width="27" /> г.
+              Чита, Ленина, 127
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2024 Интернет-магазин Палитра вкусов</p>
+      </div>
+    </footer>
+
+    <script src="/js/add-to-cart.js"></script>
+    <script src="/js/kolichestvo.js"></script>
+  </body>
+</html>
